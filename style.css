@@ -1,0 +1,274 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fdf0ff; /* Background cerah yang lembut */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: #0a0a0a;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(45deg, #0a0a0a, #333); /* Gradient yang halus */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .foto-profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .foto-profile:hover {
+    transform: scale(1.1); /* Efek hover yang halus */
+  }
+  
+  .header-text h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .header-text p {
+    color: #f9f9f9;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    margin-top: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 500;
+    background-color: #a14eda;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav a:hover, nav a.active {
+    background-color: #7c30c9;
+    transform: translateY(-3px); /* Efek hover yang memberikan efek angkat */
+  }
+  
+  /* Main content styling */
+  main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .motivasi {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .motivasi blockquote {
+    font-size: 1.6em;
+    font-style: italic;
+    color: #a600c7;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-left: 6px solid #ff66b2;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .motivasi blockquote:hover {
+    transform: scale(1.05); /* Efek hover untuk blockquote */
+  }
+  
+  /* Biodata section */
+  .biodata {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .biodata h2 {
+    font-size: 2.2rem;
+    color: #722eb4;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .biodata ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .biodata li {
+    margin: 12px 0;
+    font-size: 1.2em;
+    color: #444;
+  }
+  
+  .biodata p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    background-color: #c89fe7;
+    color: white;
+    padding: 20px 0;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+  }
+  
+  /* Introduction section */
+  .pengantar {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .pengantar h2 {
+    color: #722eb4;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .pengantar p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  /* Profile Button */
+  .btn-profil {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #a14eda;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-profil:hover {
+    background-color: #7c30c9;
+    transform: translateY(-3px); /* Efek hover tombol */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+  
+    .foto-profile {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .header-text h1 {
+      font-size: 2rem;
+    }
+  
+    .header-text p {
+      font-size: 1rem;
+    }
+  
+    .biodata h2 {
+      font-size: 1.8rem;
+    }
+  
+    .motivasi blockquote {
+      font-size: 1.3rem;
+    }
+  
+    .biodata li {
+      font-size: 1.1em;
+    }
+  
+    .pengantar h2 {
+      font-size: 1.6rem;
+    }
+  }
+  .tugas-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 6px solid #9805c5;
+    border-radius: 10px;
+  }
+  
+  .tugas-item h3 {
+    margin-top: 0;
+  }
+  
+  .tugas-item ul, .tugas-item ol {
+    margin-left: 20px;
+  }
+  .highlight {
+    background-color: #f3e5f5;
+    border-left: 6px solid #7b1fa2;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: justify; /* Inilah kuncinya */
+  }
+  
+  .highlight h3 {
+    color: #6a1b9a;
+  }
+  
+  .highlight code {
+    background-color: #e1bee7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  
