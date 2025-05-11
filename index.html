@@ -19,10 +19,37 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    header a:hover {
+      color: #ffdcfc;
     }
 
     .container {
-      text-align: center;
+      margin-top: 100px; /* Spasi untuk header */
       padding: 50px 30px;
       background-color: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
@@ -30,25 +57,26 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
       max-width: 600px;
       width: 90%;
+      margin-bottom: 30px;
     }
 
     img.profile-img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #fff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 30px;
       color: #f1f1f1;
     }
@@ -75,8 +103,8 @@
 
     .social-icons a {
       color: white;
-      font-size: 20px;
-      margin: 0 10px;
+      font-size: 24px;
+      margin: 0 15px;
       transition: color 0.3s;
     }
 
@@ -89,9 +117,33 @@
       font-size: 14px;
       color: #ddd;
     }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .btn-group a {
+        display: block;
+        margin: 10px auto;
+      }
+
+      .social-icons a {
+        font-size: 30px;
+        margin: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Portofolio</a>
+    <a href="tugas.html">Proyek</a>
+    <a href="kontak.html">Kontak</a>
+  </header>
 
   <div class="container">
     <img src="images/self.jpg" alt="Foto Putri" class="profile-img" />
@@ -99,9 +151,9 @@
     <p>Mahasiswa Teknik Informatika<br>STMIK Mardira Indonesia</p>
 
     <div class="btn-group">
-      <a href="profil.html">Portifolio</a>
-      <a href="tugas.html">Proyek</a>
-      <a href="kontak.html">Kontak</a>
+      <a href="profil.html">Lihat Portofolio</a>
+      <a href="tugas.html">Lihat Proyek</a>
+      <a href="kontak.html">Hubungi Saya</a>
     </div>
 
     <div class="social-icons">
@@ -111,7 +163,7 @@
     </div>
 
     <footer>
-      &copy; 2025 Putri
+      &copy; 2025 Putri | Semua Hak Dilindungi
     </footer>
   </div>
 
