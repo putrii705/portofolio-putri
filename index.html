@@ -3,209 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Putri | Portofolio Pribadi</title>
-
-  <!-- SEO meta tags -->
-  <meta name="description" content="Profil pribadi Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia. Website ini berisi portofolio, proyek, dan kontak.">
-  <meta name="keywords" content="Putri, Profil, Mahasiswa, STMIK Mardira Indonesia, Teknik Informatika, Web Portofolio">
-  <meta name="author" content="Putri">
-
-  <!-- Open Graph tags -->
-  <meta property="og:title" content="Putri | Profil Pribadi">
-  <meta property="og:description" content="Website portofolio Putri, mahasiswa STMIK Mardira Indonesia. Lihat profil, proyek, dan kontak.">
-  <meta property="og:image" content="https://puttrii.lovestoblog.com/images/self.jpg">
-  <meta property="og:url" content="https://puttrii.lovestoblog.com/profil.html">
-  <meta property="og:type" content="website">
+  <title>Putri | Selamat Datang</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
+    * {
       margin: 0;
-      background: linear-gradient(to bottom right, #f0f4ff, #e1f0ff);
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
-      background: linear-gradient(to right, #592ef5, #a3baff);
-      color: white;
-      padding: 40px 20px;
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #592ef5, #a3baff);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
 
-    header img {
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 30px;
-    }
-
-    header p {
-      margin: 0;
-      font-size: 16px;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    main {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #592ef5;
-      font-size: 26px;
-    }
-
-    .about, .skills, .projects, .contact {
-      background-color: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .skills ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .skills li {
-      background: #e1e9ff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .projects .card {
-      background: #f8faff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 3px solid #fff;
       margin-bottom: 20px;
     }
 
-    .projects .card h3 {
-      margin-top: 0;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
-    .btn {
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn-group a {
       display: inline-block;
-      padding: 10px 20px;
-      background-color: #592ef5;
-      color: white;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: white;
+      color: #592ef5;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background-color: #3e1ec1;
+    .btn-group a:hover {
+      background-color: #eee;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #592ef5;
-      color: #fff;
-    }
-
-    blockquote {
-      font-style: italic;
-      text-align: center;
-      color: #444;
-      margin-top: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #eee;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <div class="container">
     <img src="images/self.jpg" alt="Foto Putri">
     <h1>Putri Ramadhani</h1>
     <p>Mahasiswa Teknik Informatika - STMIK Mardira Indonesia</p>
-    <nav>
-      <a href="#about">Tentang</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Proyek</a>
-      <a href="#contact">Kontak</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="about" class="about">
-      <h2 class="section-title">Tentang Saya</h2>
-      <p>Saya Putri dari kelas E2022, jurusan Teknik Informatika. Saya memiliki ketertarikan pada pengembangan web, desain UI/UX, dan teknologi digital kreatif.</p>
-      <blockquote>"Jangan pernah menyerah, karena setiap perjuangan pasti ada hasilnya." - BTS 💜</blockquote>
-    </section>
+    <div class="btn-group">
+      <a href="profil.html">Profil</a>
+      <a href="tugas.html">Portofolio</a>
+      <a href="kontak.html">Kontak</a>
+    </div>
 
-    <section id="skills" class="skills">
-      <h2 class="section-title">Skills</h2>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>PHP & MySQL</li>
-        <li>UI/UX Design</li>
-        <li>Canva & Figma</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="projects">
-      <h2 class="section-title">Proyek</h2>
-      <div class="card">
-        <h3>Website Portofolio</h3>
-        <p>Website ini dibuat untuk tugas kuliah sebagai pengenalan pribadi dan menampilkan kemampuan teknis saya dalam HTML dan CSS.</p>
-        <a href="tugas.html" class="btn">Lihat Proyek</a>
-      </div>
-      <!-- Tambahkan proyek lain jika ada -->
-    </section>
-
-    <section id="contact" class="contact">
-      <h2 class="section-title">Kontak</h2>
-      <p>Email: putri@example.com</p>
-      <p>Instagram: <a href="https://instagram.com/puttrii" target="_blank">@puttrii</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Putri Ramadhani</p>
-  </footer>
+    <footer>
+      &copy; 2025 Putri Ramadhani
+    </footer>
+  </div>
 
 </body>
 </html>
