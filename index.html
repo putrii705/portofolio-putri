@@ -21,7 +21,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-  <!-- CSS -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -30,78 +29,103 @@
       color: #333;
     }
 
-    .container {
-      display: flex;
-      align-items: center;
-      padding: 30px;
-    }
-
-    .foto-profile {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin-right: 25px;
-    }
-
-    .header {
-      background: linear-gradient(to bottom right, #592ef5, #c4ccf3);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #fff;
-    }
-
-    .header-text p {
-      margin: 5px 0 15px;
-      color: #fff;
-    }
-
-    nav {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin-top: 15px;
-    }
-
-    nav a {
-      margin-right: 25px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-    }
-
-    nav a i {
-      margin-right: 8px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
+    header {
+      background: linear-gradient(to right, #592ef5, #a3baff);
+      color: white;
       padding: 40px 20px;
-    }
-
-    .pengantar {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .btn-profil {
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 30px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    main {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #592ef5;
+      font-size: 26px;
+    }
+
+    .about, .skills, .projects, .contact {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skills li {
+      background: #e1e9ff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .projects .card {
+      background: #f8faff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .projects .card h3 {
+      margin-top: 0;
+    }
+
+    .btn {
       display: inline-block;
-      margin-top: 15px;
       padding: 10px 20px;
       background-color: #592ef5;
       color: white;
@@ -110,61 +134,77 @@
       transition: background-color 0.3s;
     }
 
-    .btn-profil:hover {
-      background-color: #5848b6;
-    }
-
-    .motivasi {
-      margin-top: 30px;
-      text-align: center;
-      font-style: italic;
-      font-size: 1.1em;
+    .btn:hover {
+      background-color: #3e1ec1;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
       background-color: #592ef5;
       color: #fff;
+    }
+
+    blockquote {
+      font-style: italic;
+      text-align: center;
+      color: #444;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <img src="images/self.jpg" alt="Foto profil Putri dengan latar belakang ungu" class="foto-profile">
-      <div class="header-text">
-        <h1>Selamat Datang di Web Portofolio Putri</h1>
-        <p>Mahasiswa Teknik Informatika di STMIK Mardira Indonesia</p>
-        <nav>
-          <a href="index.html"><i class="fas fa-home"></i>Home</a>
-          <a href="tugas.html"><i class="fas fa-book"></i>Proyek</a>
-          <a href="kontak.html"><i class="fas fa-envelope"></i>Kontak</a>
-        </nav>
-      </div>
-    </div>
+  <header>
+    <img src="images/self.jpg" alt="Foto Putri">
+    <h1>Putri Ramadhani</h1>
+    <p>Mahasiswa Teknik Informatika - STMIK Mardira Indonesia</p>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
   </header>
 
   <main>
-    <section class="pengantar">
-      <h2>Tentang Saya</h2>
-      <p>Saya mahasiswi STMIK Mardira Indonesia dari kelas E2022, jurusan Teknik Informatika.</p>
-      <p>Website ini dibuat untuk memenuhi tugas kuliah saya dan mengenalkan diri secara singkat.</p>
-      <a href="profil.html" class="btn-profil">Lihat Profil Lengkap</a>
+    <section id="about" class="about">
+      <h2 class="section-title">Tentang Saya</h2>
+      <p>Saya Putri dari kelas E2022, jurusan Teknik Informatika. Saya memiliki ketertarikan pada pengembangan web, desain UI/UX, dan teknologi digital kreatif.</p>
+      <blockquote>"Jangan pernah menyerah, karena setiap perjuangan pasti ada hasilnya." - BTS 💜</blockquote>
     </section>
 
-    <section class="motivasi">
-      <h2>Motivasi</h2>
-      <blockquote>
-        <p>"Jangan pernah menyerah, karena setiap perjuangan pasti ada hasilnya." - BTS 💜</p>
-      </blockquote>
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>PHP & MySQL</li>
+        <li>UI/UX Design</li>
+        <li>Canva & Figma</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">Proyek</h2>
+      <div class="card">
+        <h3>Website Portofolio</h3>
+        <p>Website ini dibuat untuk tugas kuliah sebagai pengenalan pribadi dan menampilkan kemampuan teknis saya dalam HTML dan CSS.</p>
+        <a href="tugas.html" class="btn">Lihat Proyek</a>
+      </div>
+      <!-- Tambahkan proyek lain jika ada -->
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Kontak</h2>
+      <p>Email: putri@example.com</p>
+      <p>Instagram: <a href="https://instagram.com/puttrii" target="_blank">@puttrii</a></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Putri</p>
+    <p>&copy; 2025 Putri Ramadhani</p>
   </footer>
 
 </body>
