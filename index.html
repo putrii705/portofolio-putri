@@ -29,7 +29,7 @@
       left: 0;
       width: 100%;
       background: rgba(0, 0, 0, 0.6);
-      padding: 15px;
+      padding: 10px 20px; /* Kurangi padding agar navbar lebih kompak */
       z-index: 100;
       display: flex;
       justify-content: space-between;
@@ -40,7 +40,8 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 15px;
+      margin: 0 10px; /* Kurangi margin antara link */
+      padding: 5px 15px; /* Tambahkan padding untuk ruang yang lebih kecil */
       transition: color 0.3s;
     }
 
@@ -81,22 +82,6 @@
       color: #f1f1f1;
     }
 
-    .btn-group a {
-      text-decoration: none;
-      margin: 8px;
-      padding: 12px 24px;
-      background-color: #fff;
-      color: #592ef5;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-group a:hover {
-      background-color: #ddd;
-    }
-
     .social-icons {
       margin-top: 30px;
     }
@@ -124,11 +109,6 @@
         text-align: center;
       }
 
-      .btn-group a {
-        display: block;
-        margin: 10px auto;
-      }
-
       .social-icons a {
         font-size: 30px;
         margin: 0 10px;
@@ -149,12 +129,6 @@
     <img src="images/self.jpg" alt="Foto Putri" class="profile-img" />
     <h1>Putri</h1>
     <p>Mahasiswa Teknik Informatika<br>STMIK Mardira Indonesia</p>
-
-    <div class="btn-group">
-      <a href="profil.html">Lihat Portofolio</a>
-      <a href="tugas.html">Lihat Proyek</a>
-      <a href="kontak.html">Hubungi Saya</a>
-    </div>
 
     <div class="social-icons">
       <a href="https://instagram.com/putriaml705" target="_blank"><i class="fab fa-instagram"></i></a>
