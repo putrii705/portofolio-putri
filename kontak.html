@@ -1,121 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Putri | Kontak & Informasi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Putri | Kontak</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Hubungi Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia. Tersedia kontak email, WhatsApp, Instagram, dan GitHub.">
-  <meta name="keywords" content="Putri, Kontak, Mahasiswa, STMIK Mardira Indonesia, Teknik Informatika, GitHub, Instagram, WhatsApp">
-  <meta name="author" content="Putri">
+  <!-- SEO & Icons -->
+  <meta name="description" content="Hubungi Putri, mahasiswa TI STMIK Mardira Indonesia. Tersedia email, WhatsApp, Instagram, dan GitHub.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Putri | Kontak & Informasi">
-  <meta property="og:description" content="Halaman kontak resmi Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia.">
-  <meta property="og:image" content="https://puttrii.lovestoblog.com/images/self.jpg">
-  <meta property="og:url" content="https://puttrii.lovestoblog.com/kontak.html">
-  <meta property="og:type" content="website">
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-  <!-- CSS -->
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom right, #f0f4ff, #e1f0ff);
+      padding: 0;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
       color: #333;
     }
 
-    .container {
+    nav {
+      background-color: #6a5acd;
+      padding: 1rem 2rem;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      padding: 30px;
-      gap: 20px;
+      position: relative;
     }
 
-    .foto-profile {
+    .logo {
+      font-weight: bold;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    ul.nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header img {
       width: 130px;
       height: 130px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
     }
 
-    .header {
-      background: linear-gradient(to bottom right, #592ef5, #c4ccf3);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #fff;
-    }
-
-    .header-text p {
-      margin: 5px 0 15px;
-      color: #fff;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-    }
-
-    nav a i {
-      margin-right: 8px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2.2rem;
+      color: #4b0082;
     }
 
     main {
-      padding: 40px 20px;
-    }
-
-    .kontak-info {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 25px;
       max-width: 800px;
-      margin: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     .kontak-info h2 {
-      margin-bottom: 20px;
+      text-align: center;
+      color: #6a5acd;
+      margin-bottom: 1.5rem;
     }
 
     .kontak-info ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .kontak-info li {
-      margin-bottom: 15px;
-      font-size: 1.1em;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .kontak-info li i {
+      margin-right: 8px;
+      color: #6a5acd;
     }
 
     .kontak-info a {
-      color: #592ef5;
+      color: #6a5acd;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .kontak-info a:hover {
@@ -124,69 +124,83 @@
 
     footer {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background-color: #592ef5;
-      color: #fff;
+      padding: 1rem;
+      background-color: #6a5acd;
+      color: white;
+      margin-top: 2rem;
     }
 
-    /* Responsif untuk mobile */
+    /* Responsive */
     @media (max-width: 768px) {
-      .container {
+      .menu-toggle {
+        display: block;
+      }
+
+      ul.nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #6a5acd;
         flex-direction: column;
-        text-align: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        display: none;
       }
 
-      .foto-profile {
-        margin: 0 auto;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .header-text h1 {
-        font-size: 22px;
-      }
-
-      .kontak-info {
-        padding: 20px 15px;
+      ul.nav-links.active {
+        display: flex;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <img src="images/self.jpg" alt="Foto profil Putri - Mahasiswa STMIK Mardira" class="foto-profile">
-      <div class="header-text">
-        <h1>Kontak Saya</h1>
-        <p>Hubungi saya melalui media berikut</p>
-        <nav>
-          <a href="index.html"><i class="fas fa-home"></i>Home</a>
-          <a href="profil.html"><i class="fas fa-user"></i>Tentang Saya</a>
-          <a href="tugas.html"><i class="fas fa-book"></i>Proyek</a>
-        </nav>
-      </div>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Portofolio Putri</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="projek.html">Projek</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <img src="images/self.jpg" alt="Foto Putri">
+    <h1>Hubungi Saya</h1>
   </header>
 
+  <!-- Konten -->
   <main>
     <section class="kontak-info">
-      <h2>Hubungi Saya</h2>
+      <h2>Informasi Kontak</h2>
       <ul>
         <li><i class="fas fa-envelope"></i> Email: <a href="mailto:putriaml705@gmail.com">putriaml705@gmail.com</a></li>
-        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/putrii705" target="_blank" rel="noopener">github.com/putrii705</a></li>
-        <li><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/putriaml705" target="_blank" rel="noopener">@putriaml705</a></li>
-        <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6283892011678?text=Halo%20Putri,%20Saya%20mau%20berbicara%20dengan%20Anda!" target="_blank" rel="noopener">Hubungi saya di WhatsApp</a></li>
+        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/putrii705" target="_blank">github.com/putrii705</a></li>
+        <li><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/putriaml705" target="_blank">@putriaml705</a></li>
+        <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6283892011678?text=Halo%20Putri" target="_blank">Klik untuk menghubungi via WhatsApp</a></li>
       </ul>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Putri | Halaman Kontak</p>
+    &copy; 2025 Putri | Halaman Kontak
   </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
