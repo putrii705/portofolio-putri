@@ -21,6 +21,7 @@
       display: flex;
       align-items: center;
       padding: 30px;
+      flex-wrap: wrap;
     }
 
     .foto-profile {
@@ -52,6 +53,7 @@
       justify-content: flex-start;
       align-items: center;
       margin-top: 15px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -61,6 +63,7 @@
       font-weight: 500;
       display: flex;
       align-items: center;
+      font-size: 16px;
     }
 
     nav a i {
@@ -81,16 +84,15 @@
       gap: 30px;
     }
 
-   .card {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 30px; /* Menambahkan jarak bawah antara kartu */
-}
-
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+    }
 
     .card:hover {
       transform: scale(1.02);
@@ -130,6 +132,61 @@
       background-color: #592ef5;
       color: #fff;
     }
+
+    /* Responsif Mobile */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .foto-profile {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 8px 0;
+        font-size: 15px;
+      }
+
+      .header-text h1 {
+        font-size: 24px;
+      }
+
+      .header-text p {
+        font-size: 15px;
+      }
+
+      main {
+        padding: 20px 15px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      nav a {
+        font-size: 14px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+      }
+
+      .card i {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -149,24 +206,23 @@
     </div>
   </header>
 
- <main>
-  <section class="tugas-section">
-    <div class="card">
-      <i class="fas fa-book"></i>
-      <h3>Website Pribadi</h3>
-      <p>Pelajari lebih lanjut tentang proyek pribadi saya sebagai mahasiswa Teknik Informatika.</p>
-      <a href="https://puttrii.lovestoblog.com" target="_blank" rel="noopener noreferrer">Kunjungi Proyek</a>
-    </div>
+  <main>
+    <section class="tugas-section">
+      <div class="card">
+        <i class="fas fa-book"></i>
+        <h3>Website Pribadi</h3>
+        <p>Pelajari lebih lanjut tentang proyek pribadi saya sebagai mahasiswa Teknik Informatika.</p>
+        <a href="https://puttrii.lovestoblog.com" target="_blank" rel="noopener noreferrer">Kunjungi Proyek</a>
+      </div>
 
-    <div class="card">
-      <i class="fas fa-book"></i>
-      <h3>Website Portofolio</h3>
-      <p>Pelajari lebih lanjut tentang proyek portofolio pribadi saya sebagai mahasiswa Teknik Informatika.</p>
-      <a href="https://putri.my-board.org" target="_blank" rel="noopener noreferrer">Kunjungi Proyek</a>
-    </div>
-  </section>
-</main>
-
+      <div class="card">
+        <i class="fas fa-book"></i>
+        <h3>Website Portofolio</h3>
+        <p>Pelajari lebih lanjut tentang proyek portofolio pribadi saya sebagai mahasiswa Teknik Informatika.</p>
+        <a href="https://putri.my-board.org" target="_blank" rel="noopener noreferrer">Kunjungi Proyek</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Putri. Semua Hak Dilindungi.</p>
