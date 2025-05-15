@@ -89,7 +89,7 @@
       box-shadow: 0 0 10px #592ef5;
     }
 
-    /* Tombol hamburger toggle */
+    /* Tambahan untuk toggle menu */
     .menu-toggle {
       display: none;
       font-size: 26px;
@@ -101,30 +101,27 @@
     /* Responsive */
     @media (max-width: 768px) {
       nav {
+        flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 65px;
         right: 30px;
         background: linear-gradient(45deg, #592ef5, #c4ccf3);
-        flex-direction: column;
-        padding: 10px 0;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        display: none;
+        padding: 10px 0;
+        display: none; /* sembunyikan default */
         width: 180px;
         z-index: 10;
       }
-
       nav.show {
         display: flex;
       }
-
       nav a {
         padding: 12px 20px;
-        font-size: 18px;
+        font-size: 16px;
         width: 100%;
         justify-content: flex-start;
       }
-
       .menu-toggle {
         display: block;
       }
@@ -139,7 +136,9 @@
       <img src="images/self.jpg" alt="Foto Profil Putri" class="foto-profile" />
       <h1>Proyek Website Saya</h1>
     </div>
+    <!-- tombol hamburger -->
     <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+
     <nav id="navbar">
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <a href="profil.html" class="active"><i class="fas fa-user"></i> Tentang Saya</a>
@@ -148,7 +147,7 @@
   </header>
 
   <main>
-    <!-- Konten halaman kamu di sini -->
+    <!-- Isi halaman -->
   </main>
 
   <footer>
@@ -163,8 +162,8 @@
       navbar.classList.toggle('show');
     });
 
-    // Opsional: tutup menu saat klik di luar navbar (mobile)
-    document.addEventListener('click', function(event) {
+    // Tutup menu jika klik di luar
+    document.addEventListener('click', (event) => {
       if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
         navbar.classList.remove('show');
       }
