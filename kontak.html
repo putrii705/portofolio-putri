@@ -32,8 +32,10 @@
 
     .container {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       padding: 30px;
+      gap: 20px;
     }
 
     .foto-profile {
@@ -42,7 +44,6 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin-right: 25px;
     }
 
     .header {
@@ -63,13 +64,12 @@
 
     nav {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
       margin-top: 15px;
     }
 
     nav a {
-      margin-right: 25px;
       text-decoration: none;
       color: #fff;
       font-weight: 500;
@@ -128,6 +128,30 @@
       margin-top: 40px;
       background-color: #592ef5;
       color: #fff;
+    }
+
+    /* Responsif untuk mobile */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .foto-profile {
+        margin: 0 auto;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .header-text h1 {
+        font-size: 22px;
+      }
+
+      .kontak-info {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
