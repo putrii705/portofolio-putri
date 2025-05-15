@@ -48,11 +48,27 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
+      transition: 
+        color 0.3s ease, 
+        background-color 0.3s ease, 
+        box-shadow 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     ul.nav-links li a:hover {
-      color: #ffd700;
+      color: #fff;
+      background-color: #7b68ee; /* warna ungu lebih terang */
+      box-shadow: 0 0 8px rgba(123, 104, 238, 0.7);
+    }
+
+    ul.nav-links li a.active,
+    ul.nav-links li a.active:hover {
+      background-color: #483d8b; /* warna ungu gelap */
+      box-shadow: 0 0 10px rgba(72, 61, 139, 0.9);
     }
 
     header {
@@ -152,12 +168,10 @@
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-       <nav id="nav">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="profil.html"><i class="fas fa-user"></i> Tentang Saya</a>
-      <a href="proyek.html" class="active"><i class="fas fa-code"></i> Proyek</a>
-      <a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a>
-    </nav>
+      <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="profil.html"><i class="fas fa-user"></i> Tentang Saya</a></li>
+      <li><a href="proyek.html"><i class="fas fa-code"></i> Proyek</a></li>
+      <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
     </ul>
   </nav>
 
