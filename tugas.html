@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proyek Website Portofolio Putri | Mahasiswi Teknik Informatika</title>
-  <meta name="description" content="Lihat berbagai proyek website yang telah dikerjakan oleh Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia.">
-  <meta name="keywords" content="proyek website, portofolio Putri, teknik informatika, tugas kuliah, web development, STMIK Mardira Indonesia">
-  <meta name="author" content="Putri">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="description" content="Lihat berbagai proyek website yang telah dikerjakan oleh Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia." />
+  <meta name="keywords" content="proyek website, portofolio Putri, teknik informatika, tugas kuliah, web development, STMIK Mardira Indonesia" />
+  <meta name="author" content="Putri" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
   <style>
+    /* Style konsisten seperti halaman lain */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom right, #f0f4ff, #e1f0ff);
+      background: #f5f7fa;
       color: #333;
+      line-height: 1.6;
     }
 
-    .container {
+    a {
+      color: #592ef5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(45deg, #592ef5, #c4ccf3);
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
       display: flex;
       align-items: center;
-      padding: 30px;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
 
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
     .foto-profile {
-      width: 130px;
-      height: 130px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      margin-right: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-right: 15px;
     }
 
-    .header {
-      background: linear-gradient(to bottom right, #592ef5, #c4ccf3);
+    .header-left h1 {
       color: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .header-text h1 {
+      font-size: 22px;
       margin: 0;
-      font-size: 28px;
-    }
-
-    .header-text p {
-      margin: 5px 0 15px;
     }
 
     nav {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin-top: 15px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     nav a {
-      margin-right: 25px;
-      text-decoration: none;
       color: #fff;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 16px;
       display: flex;
       align-items: center;
-      font-size: 16px;
-    }
-
-    nav a i {
-      margin-right: 8px;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    nav a.active {
+      background-color: #fff;
+      color: #592ef5;
+      font-weight: 700;
+      box-shadow: 0 0 10px #592ef5;
     }
 
     main {
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     .tugas-section {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
 
@@ -88,19 +103,18 @@
       background-color: #fff;
       border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 30px;
     }
 
     .card:hover {
       transform: scale(1.02);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     }
 
     .card i {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 15px;
       color: #592ef5;
     }
@@ -108,102 +122,85 @@
     .card h3 {
       margin-bottom: 10px;
       color: #592ef5;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
     }
 
     .card a {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 20px;
+      padding: 10px 24px;
       background-color: #592ef5;
       color: white;
       text-decoration: none;
       border-radius: 6px;
+      font-weight: 600;
       transition: background-color 0.3s;
     }
 
     .card a:hover {
-      background-color: #5848b6;
+      background-color: #4b22d3;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
       background-color: #592ef5;
       color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+      font-size: 14px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
     }
 
-    /* Responsif Mobile */
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        justify-content: center;
+        gap: 15px;
       }
 
-      .foto-profile {
-        margin-right: 0;
-        margin-bottom: 15px;
+      .header-left h1 {
+        font-size: 20px;
       }
 
       nav {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin: 8px 0;
-        font-size: 15px;
-      }
-
-      .header-text h1 {
-        font-size: 24px;
-      }
-
-      .header-text p {
-        font-size: 15px;
+        justify-content: center;
+        gap: 15px;
       }
 
       main {
-        padding: 20px 15px;
+        margin: 30px 15px;
       }
     }
 
-    @media screen and (max-width: 480px) {
+    @media (max-width: 480px) {
       nav a {
         font-size: 14px;
-      }
-
-      .card {
-        padding: 20px;
+        padding: 6px 10px;
       }
 
       .card h3 {
         font-size: 18px;
-      }
-
-      .card i {
-        font-size: 32px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <img src="images/self.jpg" alt="Foto Profil Putri" class="foto-profile">
-      <div class="header-text">
-        <h1>Proyek Website Saya</h1>
-        <p>Berikut adalah beberapa tugas dan proyek yang telah saya selesaikan dalam bidang web development.</p>
-        <nav>
-          <a href="index.html"><i class="fas fa-home"></i>Home</a>
-          <a href="profil.html"><i class="fas fa-user"></i>Tentang Saya</a>
-          <a href="kontak.html"><i class="fas fa-envelope"></i>Kontak</a>
-        </nav>
-      </div>
+  <header>
+    <div class="header-left">
+      <img src="images/self.jpg" alt="Foto Profil Putri" class="foto-profile" />
+      <h1>Proyek Website Saya</h1>
     </div>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="profil.html" class="active"><i class="fas fa-user"></i> Tentang Saya</a>
+      <a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a>
+    </nav>
   </header>
 
   <main>
