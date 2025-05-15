@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Putri | Portofolio Pribadi</title>
 
   <!-- Font & Icon -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
     body {
@@ -33,19 +33,12 @@
       z-index: 100;
       display: flex;
       justify-content: center;
-
-      /* Navbar horizontal, no wrap */
-      flex-wrap: nowrap;
-
-      /* Scroll horizontal jika overflow */
+      flex-wrap: wrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-
-      /* Sembunyikan scrollbar */
-      scrollbar-width: none; /* Firefox */
+      scrollbar-width: none;
     }
 
-    /* Sembunyikan scrollbar Chrome/Safari */
     header::-webkit-scrollbar {
       display: none;
     }
@@ -60,8 +53,6 @@
       display: flex;
       align-items: center;
       font-size: 14px;
-
-      /* Jangan pecah, ukurannya sesuai konten */
       flex: 0 0 auto;
       white-space: nowrap;
       margin: 0 6px;
@@ -136,14 +127,21 @@
       color: #ddd;
     }
 
+    /* Responsiveness */
     @media screen and (max-width: 480px) {
       header {
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 10px 10px;
       }
 
       header a {
-        font-size: 13px;
-        padding: 8px 14px;
+        font-size: 12px;
+        padding: 6px 10px;
+        white-space: normal;
+        display: block;
+        text-align: center;
+        margin: 5px 0;
       }
 
       .container {
@@ -181,7 +179,7 @@
   </header>
 
   <div class="container">
-    <img src="images/self.jpg" alt="Foto Putri" class="profile-img" />
+    <img src="images/self.jpg" alt="Foto Putri" class="profile-img">
     <h1>Putri</h1>
     <p>Mahasiswa Teknik Informatika<br>STMIK Mardira Indonesia</p>
 
