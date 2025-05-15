@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proyek Website Portofolio Putri | Mahasiswi Teknik Informatika</title>
-  <meta name="description" content="Lihat berbagai proyek website yang telah dikerjakan oleh Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia." />
-  <meta name="keywords" content="proyek website, portofolio Putri, teknik informatika, tugas kuliah, web development, STMIK Mardira Indonesia" />
+  <title>Profil Putri - Mahasiswa TI</title>
+  <meta name="description" content="Kenali Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia." />
+  <meta name="keywords" content="Putri, Mahasiswa TI, STMIK Mardira Indonesia, Profil, Web Developer, Desain Web" />
   <meta name="author" content="Putri" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
   <style>
-    /* Style konsisten seperti halaman lain */
+    /* Style umum sama dengan halaman lain */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -19,7 +19,6 @@
       color: #333;
       line-height: 1.6;
     }
-
     a {
       color: #592ef5;
       text-decoration: none;
@@ -36,14 +35,11 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      position: relative;
     }
-
     .header-left {
       display: flex;
       align-items: center;
     }
-
     .foto-profile {
       width: 60px;
       height: 60px;
@@ -52,20 +48,16 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       margin-right: 15px;
     }
-
     .header-left h1 {
       color: #fff;
       font-size: 22px;
       margin: 0;
     }
-
     nav {
       display: flex;
       gap: 25px;
       flex-wrap: wrap;
-      align-items: center;
     }
-
     nav a {
       color: #fff;
       font-weight: 600;
@@ -77,11 +69,9 @@
       border-radius: 6px;
       transition: background-color 0.3s;
     }
-
     nav a:hover {
       background-color: rgba(255,255,255,0.2);
     }
-
     nav a.active {
       background-color: #fff;
       color: #592ef5;
@@ -89,86 +79,122 @@
       box-shadow: 0 0 10px #592ef5;
     }
 
-    /* Tambahan untuk toggle menu */
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section.biodata {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+    section.biodata h2 {
+      color: #592ef5;
+      font-size: 24px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section.biodata ul {
+      padding-left: 20px;
+    }
+    blockquote {
+      font-style: italic;
+      background-color: #f0f0f0;
+      border-left: 5px solid #592ef5;
+      padding: 15px 20px;
+      color: #555;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #592ef5;
       color: #fff;
-      cursor: pointer;
-      user-select: none;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 60px;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+      header {
+        justify-content: center;
+        gap: 15px;
+      }
+      .header-left h1 {
+        font-size: 20px;
+      }
       nav {
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        right: 30px;
-        background: linear-gradient(45deg, #592ef5, #c4ccf3);
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        padding: 10px 0;
-        display: none; /* sembunyikan default */
-        width: 180px;
-        z-index: 10;
+        justify-content: center;
+        gap: 15px;
       }
-      nav.show {
-        display: flex;
-      }
-      nav a {
-        padding: 12px 20px;
-        font-size: 16px;
-        width: 100%;
-        justify-content: flex-start;
-      }
-      .menu-toggle {
-        display: block;
+      main {
+        margin: 30px 15px;
       }
     }
-
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+      section.biodata h2 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <div class="header-left">
       <img src="images/self.jpg" alt="Foto Profil Putri" class="foto-profile" />
-      <h1>Proyek Website Saya</h1>
+      <h1>Putri - Mahasiswa TI</h1>
     </div>
-    <!-- tombol hamburger -->
-    <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
-
-    <nav id="navbar">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="profil.html" class="active"><i class="fas fa-user"></i> Tentang Saya</a>
+    <nav>
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="tugas.html"><i class="fas fa-book"></i> Proyek</a>
       <a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a>
+      <!-- Tidak ada tombol "Tentang Saya" -->
     </nav>
   </header>
 
   <main>
-    <!-- Isi halaman -->
+    <section class="biodata">
+      <h2><i class="fas fa-user"></i> Tentang Saya</h2>
+      <p>Halo! Saya <strong>Putri</strong>, mahasiswa <strong>Teknik Informatika</strong> di STMIK Mardira Indonesia, kelas E2022. Saya memiliki minat besar dalam bidang desain web dan pengembangan front-end.</p>
+    </section>
+
+    <section class="biodata">
+      <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+      <ul>
+        <li><strong>STMIK Mardira Indonesia</strong> - Teknik Informatika (2022 - sekarang)</li>
+        <li><strong>SMK KP Pasirjambu</strong> - Teknik Komputer dan Jaringan (2019 - 2022)</li>
+      </ul>
+    </section>
+
+    <section class="biodata">
+      <h2><i class="fas fa-code"></i> Keahlian</h2>
+      <p>HTML, CSS, dasar JavaScript, dan desain menggunakan Canva.</p>
+    </section>
+
+    <section class="biodata">
+      <h2><i class="fas fa-music"></i> Hobi & Minat</h2>
+      <p>Mendesain, membaca novel, dan mendengarkan musik K-Pop, terutama BTS 💜.</p>
+    </section>
+
+    <section class="biodata">
+      <h2><i class="fas fa-quote-left"></i> Motivasi</h2>
+      <blockquote>"Jangan pernah menyerah, karena setiap perjuangan pasti ada hasilnya." - BTS</blockquote>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Putri. Semua Hak Dilindungi.</p>
+    <p>&copy; 2025 Putri | Mahasiswa Teknik Informatika STMIK Mardira Indonesia</p>
   </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
-
-    menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('show');
-    });
-
-    // Tutup menu jika klik di luar
-    document.addEventListener('click', (event) => {
-      if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
-        navbar.classList.remove('show');
-      }
-    });
-  </script>
-
 </body>
 </html>
