@@ -2,199 +2,201 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profil Putri - Mahasiswa TI</title>
-  <meta name="description" content="Kenali Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia." />
-  <meta name="keywords" content="Putri, Mahasiswa TI, STMIK Mardira Indonesia, Profil, Web Developer, Desain Web" />
-  <meta name="author" content="Putri" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Portofolio Putri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* Style umum sama dengan halaman lain */
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f5f7fa;
+      padding: 0;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
       color: #333;
-      line-height: 1.6;
     }
-    a {
-      color: #592ef5;
+
+    nav {
+      background-color: #6a5acd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.nav-links li a {
+      color: white;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    ul.nav-links li a:hover {
+      color: #ffd700;
     }
 
     header {
-      background: linear-gradient(45deg, #592ef5, #c4ccf3);
-      padding: 15px 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
     }
-    .header-left {
-      display: flex;
-      align-items: center;
-    }
-    .foto-profile {
-      width: 60px;
-      height: 60px;
+
+    header img {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin-right: 15px;
+      border: 5px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
     }
-    .header-left h1 {
-      color: #fff;
-      font-size: 22px;
-      margin: 0;
-    }
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #fff;
-      font-weight: 600;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    nav a.active {
-      background-color: #fff;
-      color: #592ef5;
-      font-weight: 700;
-      box-shadow: 0 0 10px #592ef5;
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 2.2rem;
+      color: #4b0082;
     }
 
     main {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-    section.biodata {
-      background-color: #fff;
-      padding: 25px 30px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+    section {
+      margin-bottom: 2.5rem;
     }
-    section.biodata h2 {
-      color: #592ef5;
-      font-size: 24px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+
+    h2 {
+      color: #6a5acd;
+      border-bottom: 2px solid #6a5acd;
+      padding-bottom: 0.5rem;
     }
-    section.biodata ul {
-      padding-left: 20px;
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
-    blockquote {
+
+    .quote {
       font-style: italic;
-      background-color: #f0f0f0;
-      border-left: 5px solid #592ef5;
-      padding: 15px 20px;
-      color: #555;
-      margin: 0;
+      color: #444;
+      background-color: #f0e6ff;
+      border-left: 5px solid #6a5acd;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
 
     footer {
-      background-color: #592ef5;
-      color: #fff;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 60px;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
+      padding: 1rem;
+      background-color: #6a5acd;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 2rem;
     }
 
-    /* Responsive */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
-      header {
-        justify-content: center;
-        gap: 15px;
+      .menu-toggle {
+        display: block;
       }
-      .header-left h1 {
-        font-size: 20px;
+
+      ul.nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #6a5acd;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        display: none;
       }
-      nav {
-        justify-content: center;
-        gap: 15px;
-      }
-      main {
-        margin: 30px 15px;
-      }
-    }
-    @media (max-width: 480px) {
-      nav a {
-        font-size: 14px;
-        padding: 6px 10px;
-      }
-      section.biodata h2 {
-        font-size: 20px;
+
+      ul.nav-links.active {
+        display: flex;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <img src="images/self.jpg" alt="Foto Profil Putri" class="foto-profile" />
-      <h1>Putri - Mahasiswa TI</h1>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Portofolio Putri</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
-    <nav>
-      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
-      <a href="tugas.html"><i class="fas fa-book"></i> Proyek</a>
+    <ul class="nav-links" id="navLinks">
+       <nav id="nav">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="profil.html"><i class="fas fa-user"></i> Tentang Saya</a>
+      <a href="proyek.html" class="active"><i class="fas fa-code"></i> Proyek</a>
       <a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a>
-      <!-- Tidak ada tombol "Tentang Saya" -->
     </nav>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <img src="images/self.jpg" alt="Foto Putri" />
+    <h1>Selamat Datang di Portofolio Saya</h1>
   </header>
 
+  <!-- Konten -->
   <main>
-    <section class="biodata">
-      <h2><i class="fas fa-user"></i> Tentang Saya</h2>
-      <p>Halo! Saya <strong>Putri</strong>, mahasiswa <strong>Teknik Informatika</strong> di STMIK Mardira Indonesia, kelas E2022. Saya memiliki minat besar dalam bidang desain web dan pengembangan front-end.</p>
+    <section>
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya Putri, mahasiswa Teknik Informatika STMIK Mardira Indonesia. Saya memiliki ketertarikan besar dalam pengembangan web, antarmuka pengguna yang intuitif, serta dunia kreatif digital. Saya percaya bahwa teknologi bukan hanya soal logika, tapi juga seni dalam menyelesaikan masalah dengan cara yang menarik dan efisien.
+      </p>
     </section>
 
-    <section class="biodata">
-      <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
-      <ul>
-        <li><strong>STMIK Mardira Indonesia</strong> - Teknik Informatika (2022 - sekarang)</li>
-        <li><strong>SMK KP Pasirjambu</strong> - Teknik Komputer dan Jaringan (2019 - 2022)</li>
-      </ul>
-    </section>
-
-    <section class="biodata">
-      <h2><i class="fas fa-code"></i> Keahlian</h2>
-      <p>HTML, CSS, dasar JavaScript, dan desain menggunakan Canva.</p>
-    </section>
-
-    <section class="biodata">
-      <h2><i class="fas fa-music"></i> Hobi & Minat</h2>
-      <p>Mendesain, membaca novel, dan mendengarkan musik K-Pop, terutama BTS 💜.</p>
-    </section>
-
-    <section class="biodata">
-      <h2><i class="fas fa-quote-left"></i> Motivasi</h2>
-      <blockquote>"Jangan pernah menyerah, karena setiap perjuangan pasti ada hasilnya." - BTS</blockquote>
+    <section>
+      <h2>Kutipan Favorit</h2>
+      <div class="quote">
+        "Don't be afraid to be different. Be afraid of being the same as everyone else."  
+        <br />— BTS
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Putri | Mahasiswa Teknik Informatika STMIK Mardira Indonesia</p>
+    &copy; 2025 Putri | Mahasiswa TI STMIK Mardira Indonesia
   </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>
